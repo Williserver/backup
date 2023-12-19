@@ -1,0 +1,8 @@
+#!/bin/bash
+
+server=$1
+subdir=$2
+date=$(date +%Y-%m-%d_%H)
+name="$server-bk$date.tar.gz"
+
+/usr/bin/tar -czf /home/minecraft/backups/minecraft/$server/$subdir/$name /home/minecraft/$server

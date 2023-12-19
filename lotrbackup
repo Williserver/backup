@@ -1,0 +1,11 @@
+#!/bin/bash
+
+server=$1
+subdir=$2
+date=$(date +%Y-%m-%d_%H)
+name="$server-bk$date"
+
+# NOTE: unfortunately, LOTR mod uses too many flat files for compression to be useful.
+# This means we are copying the directory uncompressed.
+cp -r /home/minecraft/$server /home/minecraft/backups/minecraft/$server/$subdir/$name 
+

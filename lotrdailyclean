@@ -1,0 +1,3 @@
+#!/bin/bash
+
+cd /home/minecraft/backups/minecraft/LOTR/daily && find ./* -ctime +7 -exec rm -r {} \;

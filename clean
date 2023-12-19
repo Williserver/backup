@@ -1,0 +1,7 @@
+#!/bin/bash
+
+target=$1
+subdir=$2
+time=$3
+
+cd /home/minecraft/backups/minecraft/$target/$daily && find ./* -ctime +$time -exec rm {} \;
